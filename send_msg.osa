@@ -1,0 +1,19 @@
+#!/usr/bin/osascript
+#
+# Reference from
+# https://gist.github.com/comfuture/cb88216c66de42acbbc375c48cb35045/revisions
+
+on run argv
+  set nr to item 1 of argv
+  set msg to item 2 of argv
+
+  tell application "System Events"
+    tell application "Messages" to activate
+  end tell
+
+  tell application "Messages"
+    set Messages to get id of first service
+    set receipant to buddy nr of service id Messages
+    send msg to receipant
+  end tell
+end
