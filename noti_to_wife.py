@@ -29,10 +29,10 @@ while True:
 
     # 11, 14, 17
     if snd_cnt == 0:
-        if (now.hour != 17):
+        if (now.hour != 11):
             continue
     elif snd_cnt == 1:
-        if (now.hour != 17):
+        if (now.hour != 14):
             continue
     elif snd_cnt == 2:
         if (now.hour != 17):
